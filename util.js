@@ -8,8 +8,9 @@ exports.params = {
   CACHE_BYTES_INIT: 16777216,    // 2**24          # bytes in dataset at genesis
   CACHE_BYTES_GROWTH: 131072,    // 2**17  cache growth per epoch
   CACHE_MULTIPLIER: 1024,        // Size of the DAG relative to the cache
-  EPOCH_LENGTH : 60000,          // blocks per epoch    ETH=30000,ETC=60000
-  ETCHASH_EPOCH_HEIGHT : 11700000,// etc epoch height
+    ETHASH_EPOCH_LENGTH : 30000,          // blocks per epoch    ETH=30000,ETC=60000
+    ETCHASH_EPOCH_LENGTH:60000,
+    ETCHASH_EPOCH_HEIGHT:2520000,  //11700000  2520000
   MIX_BYTES: 128,                // width of mix
   HASH_BYTES: 64,                // hash length in bytes
   DATASET_PARENTS: 256,          // number of parents of each dataset element
@@ -39,7 +40,10 @@ exports.getFullSize = function(epoc){
 }
 
 exports.getEpoc = function(blockNumber){
-  return Math.floor(blockNumber / exports.params.EPOCH_LENGTH) 
+    const epoch_length = blockNumber >= exports.params.ETCHASH_EPOCH_HEIGHT ? exports.params.ETCHASH_EPOCH_LENGTH : exports.params.ETHASH_EPOCH_LENGTH;
+    const epoch       = blockNumber / epoch_length;
+    console.log("now epoch:"+Math.floor(epoch) +"epoch_length:"+epoch_length)
+  return Math.floor(epoch)
 }
 
 /**

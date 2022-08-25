@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zangjiahe/etchashjs.git"
+    "url": "git+https://github.com/StarMapBlock/etchashjs.git"
   },
   "keywords": [
     "ethash",
@@ -22,9 +22,9 @@
   "author": "starmap <mjbecze@gmail.com>",
   "license": "MPL-2.0",
   "bugs": {
-    "url": "https://github.com/zangjiahe/etchashjs/issues"
+    "url": "https://github.com/StarMapBlock/etchashjs/issues"
   },
-  "homepage": "https://github.com/zangjiahe/etchashjs#readme",
+  "homepage": "https://github.com/StarMapBlock/etchashjs#readme",
   "dependencies": {
     "async": "^1.4.2",
     "buffer-xor": "^1.0.3",
