@@ -58,6 +58,7 @@ exports.getSeed = function(seed, begin, end){
   for(var i = begin; i < end; i++){
     seed = ethUtil.sha3(seed)
   }
+  console.log(seed.toString('hex'))
   return seed
 }
 
