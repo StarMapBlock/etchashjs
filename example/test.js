@@ -20,9 +20,9 @@ var cacheDB = levelup('', {
 
 var ethash = new Ethash(cacheDB);
 
-var header = Buffer('b4f56370bbf2705583da32f9e66a23856dcc5877ff3bd800463c6459023fba85', 'hex');
+var header = Buffer('93b2930cb3de350b662fb31e8d2ffba5dde2e5373183a684c43396146fdc35cc', 'hex');
 
-ethash.verifySubmit(35414, header, '951bbad4f01eaa7c', function (result) {
+ethash.verifySubmit(15824795, header, '78fc813bf50e677f', function (result) {
 
   console.log("result"+","+result.toString('hex'));
 });
