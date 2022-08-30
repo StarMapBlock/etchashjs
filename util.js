@@ -10,7 +10,7 @@ exports.params = {
   CACHE_MULTIPLIER: 1024,        // Size of the DAG relative to the cache
     ETHASH_EPOCH_LENGTH : 30000,          // blocks per epoch    ETH=30000,ETC=60000
     ETCHASH_EPOCH_LENGTH:60000,
-    ETCHASH_EPOCH_HEIGHT:11700000,  //11700000  2520000
+    ETCHASH_EPOCH_HEIGHT:2520000,  //11700000  2520000
   MIX_BYTES: 128,                // width of mix
   HASH_BYTES: 64,                // hash length in bytes
   DATASET_PARENTS: 256,          // number of parents of each dataset element
