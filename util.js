@@ -42,7 +42,7 @@ exports.getFullSize = function(epoc){
 exports.getEpoc = function(blockNumber){
     const epoch_length = blockNumber >= exports.params.ETCHASH_EPOCH_HEIGHT ? exports.params.ETCHASH_EPOCH_LENGTH : exports.params.ETHASH_EPOCH_LENGTH;
     const epoch       = blockNumber / epoch_length;
-    // console.log("now epoch:"+Math.floor(epoch) +",epoch_length:"+epoch_length,"blockNumber:",blockNumber)
+    console.log("now epoch:"+Math.floor(epoch) +",epoch_length:"+epoch_length,"blockNumber:",blockNumber)
   return Math.floor(epoch)
 }
 
