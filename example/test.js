@@ -1,7 +1,7 @@
 const Ethash = require('..')
 const levelup = require('levelup')
 const memdown = require('memdown')
-
+const ethHashUtil = require('../util.js')
 Ethash.prototype.verifySubmit = function (number, headerHash, nonce, cb) {
   var self = this
   console.log(number);
@@ -13,6 +13,7 @@ Ethash.prototype.verifySubmit = function (number, headerHash, nonce, cb) {
   })
 }
 
+console.log("epch",ethHashUtil.getEpoc(7080007))
 
 var cacheDB = levelup('', {
   db: memdown
